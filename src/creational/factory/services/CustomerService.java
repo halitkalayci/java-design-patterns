@@ -1,15 +1,15 @@
 package creational.factory.services;
 
-import creational.factory.LoggerFactory;
+import creational.factory.factories.ILoggerFactory;
+import creational.factory.factories.LoggerFactory;
 import creational.factory.logging.ILogger;
-import creational.singleton.loggers.Logger;
 
 public class CustomerService implements ICustomerService{
-    private LoggerFactory loggerFactory;
+    private ILoggerFactory loggerFactory;
     private ILogger logger;
 
-    public CustomerService() {
-        loggerFactory = new LoggerFactory();
+    public CustomerService(ILoggerFactory _loggerFactory) {
+        loggerFactory=_loggerFactory;
         logger = loggerFactory.createLogger();
     }
 

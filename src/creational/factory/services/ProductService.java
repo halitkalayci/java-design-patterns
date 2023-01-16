@@ -1,14 +1,16 @@
 package creational.factory.services;
 
-import creational.factory.LoggerFactory;
+import creational.factory.factories.ILoggerFactory;
+import creational.factory.factories.LoggerFactory;
 import creational.factory.logging.ILogger;
 
 public class ProductService implements IProductService{
 
+    private ILoggerFactory loggerFactory;
     private ILogger logger;
 
-    public ProductService() {
-        LoggerFactory loggerFactory = new LoggerFactory();
+    public ProductService(ILoggerFactory loggerFactory) {
+        this.loggerFactory =loggerFactory;
         logger = loggerFactory.createLogger();
     }
 
