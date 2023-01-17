@@ -3,10 +3,12 @@ package structural.proxy.proxies;
 import structural.proxy.services.ExampleService;
 import structural.proxy.services.IExampleService;
 
+import java.util.HashMap;
+
+
 public class ExampleServiceProxy implements IExampleService {
     private IExampleService exampleService;
-    // Servisteki istekte => parametre 1 gönderildi => cevap 10 geldi 1,10
-    private int data = -1;
+    private HashMap<Integer,Integer> datas = new HashMap<Integer,Integer>();
 
     public ExampleServiceProxy() {
         this.exampleService = new ExampleService();
@@ -14,10 +16,9 @@ public class ExampleServiceProxy implements IExampleService {
 
     @Override
     public int getData(int number) {
-        // Proxy davranışı..
-        if(data == -1){
-            data = exampleService.getData(number);
+        if(!datas.containsKey(number)){
+            datas.put(number,exampleService.getData(number));
         }
-        return data;
+        return datas.get(number);
     }
 }

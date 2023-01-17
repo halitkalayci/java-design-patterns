@@ -10,5 +10,6 @@ public class Main {
         IExampleService exampleService = new ExampleServiceProxy();
         System.out.println(exampleService.getData(5));
         System.out.println(exampleService.getData(10));
+        System.out.println(exampleService.getData(10));
     }
 }
