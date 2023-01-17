@@ -7,12 +7,14 @@ import creational.abstract_factory.logging.Logging;
 
 public class Factory1 extends CrossCuttingConcernFactory{
     @Override
-    public Caching createCaching() {
+    public Caching createCaching()
+    {
         return new RedisCaching();
     }
 
     @Override
-    public Logging createLogging() {
+    public Logging createLogging()
+    {
         return new FileLogging();
     }
 }

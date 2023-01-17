@@ -14,7 +14,7 @@ public class Main {
         ICustomerService customerService = new CustomerService(new LoggerFactory());
         customerService.add();
 
-        IProductService productService = new ProductService(new LoggerFactory());
+        IProductService productService = new ProductService(new LoggerFactory2());
         productService.add();
     }
 }

@@ -11,5 +11,4 @@ public interface ICarBuilder {
     void setCarType(CarType carType);
 
     Car createCar();
-    //14.45
 }

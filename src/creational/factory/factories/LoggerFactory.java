@@ -3,7 +3,8 @@ package creational.factory.factories;
 import creational.factory.logging.DatabaseLogger;
 import creational.factory.logging.ILogger;
 
-public class LoggerFactory implements ILoggerFactory{
+public class LoggerFactory implements ILoggerFactory
+{
     // Fabrika görevi..
 
     @Override

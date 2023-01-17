@@ -3,7 +3,7 @@ package structural.proxy.services;
 public class ExampleService implements IExampleService{
     @Override
     public int getData(int number) {
-        // Simülasyon: 10 saniyelik bir işlem..
+        // Simülasyon: number kadar saniyelik bir işlem..
         int total=0;
         for (int i=0; i<number; i++){
             total += i;

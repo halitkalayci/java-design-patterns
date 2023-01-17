@@ -12,7 +12,7 @@ public class CarBuilder implements ICarBuilder{
 
     @Override
     public void setSeats(int seats) {
-        if(seats>4) seats=4;
+        if(seats>6) seats=6;
         car.setSeats(seats);
     }
 

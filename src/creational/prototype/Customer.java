@@ -5,7 +5,6 @@ public class Customer extends Person{
     private int age;
 
     public Customer(){
-        age=10;
     }
     public Customer(Customer customer){
         super(customer);
